@@ -1,9 +1,7 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
-
-    
-
     return (
         <section
             id="home"
@@ -11,13 +9,33 @@ export default function Hero() {
         >
             <div className="mx-auto max-w-4xl text-center">
                 <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl">
-                    Your Name
+                    José Manuel Redondo
                 </h1>
-                <p className="mt-4 text-xl font-semibold text-zinc-600 dark:text-zinc-300">
-                    I&apos;m a Developer
-                </p>
 
-                {/* Social */}
+                {/* Typing Animation */}
+                <div className="mt-4 text-xl font-semibold text-zinc-600 dark:text-zinc-300">
+                    <TypeAnimation
+                        sequence={[
+                            "De Maestro a Desarrollador de Aplicaciones", 2000,
+                            "Entusiasta de la enseñanza y la tecnología", 2000
+                        ]}
+                        speed={50}
+                        repeat={Infinity}
+                    />
+                </div>
+
+                {/* Botón Descargar CV */}
+                <div className="mt-6">
+                    <a
+                        href="/public/CV_Edu ESP José Manuel Redondo 2025.pdf"
+                        download
+                        className="inline-block rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition"
+                    >
+                        Descargar CV
+                    </a>
+                </div>
+
+                {/* Social Icons */}
                 <div className="mt-8 flex items-center justify-center gap-5">
                     <a
                         href="https://linkedin.com"
