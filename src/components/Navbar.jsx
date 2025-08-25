@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, Github, Linkedin, Mail } from "lucide-react";
 
 const links = [
     { label: "Sobre mí", href: "#about" },
@@ -61,6 +61,33 @@ export default function Navbar({ theme, onToggleTheme }) {
 
                 {/* Botones */}
                 <div className="flex items-center gap-2">
+                    <a
+                        href="https://linkedin.com/in/jose-manuel-redondo-conde/"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="LinkedIn"
+                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
+                    >
+                        <Linkedin />
+                    </a>
+                    <a
+                        href="https://github.com/zemanue"
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="GitHub"
+                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
+                    >
+                        <Github />
+                    </a>
+                    <a
+                        href="mailto:manureco.97@gmail.com"
+                        aria-label="Email"
+                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
+                    >
+                        <Mail />
+                    </a>
+
+
                     {/* Toggle tema */}
                     <button
                         onClick={onToggleTheme}
