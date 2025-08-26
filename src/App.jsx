@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Skills from "./components/Skills";
 
 export default function App() {
   // Tema inicial desde localStorage o preferencia del sistema
@@ -27,7 +28,7 @@ export default function App() {
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
-        <section id="skills" className="h-screen bg-gray-100 dark:bg-zinc-800"></section>
+        <Skills />
         <section id="education" className="h-screen bg-gray-200 dark:bg-zinc-700"></section>
         <section id="experience" className="h-screen bg-gray-300 dark:bg-zinc-600"></section>
       </main>
