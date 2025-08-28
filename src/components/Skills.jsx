@@ -1,14 +1,15 @@
+import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaPhp, FaReact, FaUnity, FaGitAlt, FaGithub } from "react-icons/fa6";
 import { TbBrandCSharp } from "react-icons/tb";
-import { SiAndroidstudio, SiGithubcopilot, SiMysql, SiMongodb, SiSpringboot, SiPhpmyadmin, SiOpenai, SiGooglegemini } from "react-icons/si";
-import { BiLogoVisualStudio } from "react-icons/bi"
+import { SiAndroidstudio, SiGithubcopilot, SiMysql, SiMongodb, SiSpringboot, SiPhpmyadmin, SiOpenai, SiGooglegemini, SiPostman, SiClaude } from "react-icons/si";
+import { BiLogoVisualStudio } from "react-icons/bi";
 
 const skills = {
     "Lenguajes de Programación": [
+        { name: "Java", icon: <FaJava className="text-red-500 text-5xl" /> },
         { name: "HTML", icon: <FaHtml5 className="text-orange-500 text-5xl" /> },
         { name: "CSS", icon: <FaCss3Alt className="text-blue-500 text-5xl" /> },
         { name: "JavaScript", icon: <FaJs className="text-yellow-400 text-5xl" /> },
-        { name: "Java", icon: <FaJava className="text-red-500 text-5xl" /> },
         { name: "PHP", icon: <FaPhp className="text-indigo-500 text-5xl" /> },
         { name: "C#", icon: <TbBrandCSharp className="text-purple-500 text-5xl" /> },
     ],
@@ -29,17 +30,19 @@ const skills = {
     "Entornos y Herramientas": [
         { name: "Visual Studio Code", icon: <BiLogoVisualStudio className="text-blue-500 text-5xl" /> },
         { name: "Android Studio", icon: <SiAndroidstudio className="text-green-500 text-5xl" /> },
+        { name: "Postman", icon: <SiPostman className="text-orange-500 text-5xl" /> },
     ],
     "IA y Asistentes": [
         { name: "ChatGPT", icon: <SiOpenai className="text-black-400 text-5xl" /> },
         { name: "Gemini", icon: <SiGooglegemini className="text-blue-400 text-5xl" /> },
         { name: "GitHub Copilot", icon: <SiGithubcopilot className="text-indigo-400 text-5xl" /> },
+        { name: "Claude", icon: <SiClaude className="text-yellow-400 text-5xl" /> },
     ]
 };
 
 function SkillsGrid({ children }) {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {children}
         </div>
     );
@@ -49,31 +52,47 @@ function SkillCard({ skill }) {
     return (
         <div
             key={skill.name}
-            className="flex flex-col items-center p-4 rounded-xl bg-zinc-800 dark:bg-zinc-800 text-zinc-100 hover:bg-zinc-700 dark:hover:bg-zinc-700 shadow-md hover:scale-105 transform transition duration-300"
+            className="flex flex-col items-center p-4 rounded-xl bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 hover:bg-blue-50 dark:hover:bg-zinc-800 shadow transition-all duration-300 hover:scale-105 border border-zinc-200 dark:border-zinc-700"
         >
-            {skill.icon}
-            <span className="mt-3 text-lg">{skill.name}</span>
+            <span className="mb-2">{skill.icon}</span>
+            <span className="mt-1 text-base font-medium tracking-tight text-center break-words w-full">{skill.name}</span>
         </div>
     );
 }
 
 export default function Skills() {
-    return (
-        <section id="skills" className="py-16 px-6 bg-white dark:bg-zinc-900 transition-colors duration-500">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-12 text-zinc-900 dark:text-zinc-100">Habilidades</h2>
+    const skillEntries = Object.entries(skills);
+    // Agrupar categorías de 2 en 2
+    const grouped = [];
+    for (let i = 0; i < skillEntries.length; i += 2) {
+        grouped.push(skillEntries.slice(i, i + 2));
+    }
 
-                {Object.entries(skills).map(([category, items]) => (
-                    <div key={category} className="mb-10">
-                        <h3 className="text-2xl font-semibold mb-6 text-zinc-800 dark:text-zinc-200">{category}</h3>
-                        <SkillsGrid>
-                            {items.map((skill) => (
-                                <SkillCard key={skill.name} skill={skill} />
+    return (
+        <section id="skills" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
+            <div className="max-w-6xl mx-auto">
+                <h2 className="text-4xl font-extrabold text-center mb-14 text-zinc-900 dark:text-zinc-100 tracking-tight">Habilidades</h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    {grouped.map((pair, idx) => (
+                        <React.Fragment key={idx}>
+                            {pair.map(([category, items]) => (
+                                <div key={category} className="rounded-2xl bg-white/80 dark:bg-zinc-800/80 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700">
+                                    <h3 className="text-2xl font-bold mb-6 text-blue-700 dark:text-blue-300 flex items-center gap-2">
+                                        <span className="inline-block w-2 h-6 bg-blue-500 dark:bg-blue-400 rounded-full mr-2" />
+                                        {category}
+                                    </h3>
+                                    <SkillsGrid>
+                                        {items.map((skill) => (
+                                            <SkillCard key={skill.name} skill={skill} />
+                                        ))}
+                                    </SkillsGrid>
+                                </div>
                             ))}
-                        </SkillsGrid>
-                    </div>
-                ))}
+                        </React.Fragment>
+                    ))}
+                </div>
             </div>
         </section>
     );
-};
+}
