@@ -37,7 +37,27 @@ const skills = {
     ]
 };
 
-const Skills = () => {
+function SkillsGrid({ children }) {
+    return (
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {children}
+        </div>
+    );
+}
+
+function SkillCard({ skill }) {
+    return (
+        <div
+            key={skill.name}
+            className="flex flex-col items-center p-4 rounded-xl bg-zinc-800 dark:bg-zinc-800 text-zinc-100 hover:bg-zinc-700 dark:hover:bg-zinc-700 shadow-md hover:scale-105 transform transition duration-300"
+        >
+            {skill.icon}
+            <span className="mt-3 text-lg">{skill.name}</span>
+        </div>
+    );
+}
+
+export default function Skills() {
     return (
         <section id="skills" className="py-16 px-6 bg-white dark:bg-zinc-900 transition-colors duration-500">
             <div className="max-w-6xl mx-auto">
@@ -46,22 +66,14 @@ const Skills = () => {
                 {Object.entries(skills).map(([category, items]) => (
                     <div key={category} className="mb-10">
                         <h3 className="text-2xl font-semibold mb-6 text-zinc-800 dark:text-zinc-200">{category}</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        <SkillsGrid>
                             {items.map((skill) => (
-                                <div
-                                    key={skill.name}
-                                    className="flex flex-col items-center p-4 rounded-xl bg-zinc-800 dark:bg-zinc-800 text-zinc-100 hover:bg-zinc-700 dark:hover:bg-zinc-700 shadow-md hover:scale-105 transform transition duration-300"
-                                >
-                                    {skill.icon}
-                                    <span className="mt-3 text-lg">{skill.name}</span>
-                                </div>
+                                <SkillCard key={skill.name} skill={skill} />
                             ))}
-                        </div>
+                        </SkillsGrid>
                     </div>
                 ))}
             </div>
         </section>
     );
 };
-
-export default Skills;
