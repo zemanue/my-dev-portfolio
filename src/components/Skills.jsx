@@ -40,6 +40,20 @@ const skills = {
     ]
 };
 
+const softSkills = [
+    "Resolución de problemas",
+    "Comunicación",
+    "Trabajo en equipo",
+    "Proactividad",
+    "Pensamiento crítico",
+    "Auto-aprendizaje",
+    "Adaptabilidad",
+    "Resiliencia",
+    "Creatividad",
+    "Aprendizaje continuo",
+    "Orientación al detalle"
+];
+
 function SkillsGrid({ children }) {
     return (
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -91,6 +105,24 @@ export default function Skills() {
                             ))}
                         </React.Fragment>
                     ))}
+                </div>
+
+                {/* Soft Skills */}
+                <div className="mt-14">
+                    <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-300 flex items-center gap-2">
+                        <span className="inline-block w-2 h-6 bg-green-500 dark:bg-green-400 rounded-full mr-2" />
+                        Soft Skills
+                    </h3>
+                    <div className="flex flex-row gap-[1%] flex-wrap">
+                        {softSkills.map((skill) => (
+                            <span
+                                key={skill}
+                                className="inline-block w-fit px-4 py-2 rounded-full bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 font-medium text-base shadow-sm border border-green-200 dark:border-green-800 m-2"
+                            >
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
