@@ -19,16 +19,16 @@ const skills = {
     "Frameworks y Librerías": [
         { name: "React", icon: <FaReact className="text-cyan-400 text-5xl" /> },
         { name: "Spring Boot", icon: <SiSpringboot className="text-green-500 text-5xl" /> },
-        { name: "Unity", icon: <FaUnity className="text-gray-400 text-5xl" /> },
+        { name: "Unity", icon: <FaUnity className="text-black-900 text-5xl" /> },
     ],
     "Bases de Datos": [
-        { name: "MySQL", icon: <SiMysql className="text-blue-500 text-5xl" /> },
+        { name: "MySQL", icon: <SiMysql className="text-blue-800 text-5xl" /> },
         { name: "phpMyAdmin", icon: <SiPhpmyadmin className="text-orange-400 text-5xl" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-500 text-5xl" /> },
     ],
     "Control de Versiones": [
         { name: "Git", icon: <FaGitAlt className="text-orange-500 text-5xl" /> },
-        { name: "GitHub", icon: <FaGithub className="text-white text-5xl" /> },
+        { name: "GitHub", icon: <FaGithub className="text-black-400 text-5xl" /> },
     ],
     "Entornos y Herramientas": [
         { name: "Visual Studio Code", icon: <BiLogoVisualStudio className="text-blue-500 text-5xl" /> },
