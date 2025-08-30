@@ -4,6 +4,9 @@ import { TbBrandCSharp } from "react-icons/tb";
 import { SiAndroidstudio, SiGithubcopilot, SiMysql, SiMongodb, SiSpringboot, SiPhpmyadmin, SiOpenai, SiGooglegemini, SiPostman, SiClaude } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 
+import TitleH2 from "./TitleH2";
+import TitleH3 from "./TitleH3";
+
 const skills = {
     "Lenguajes de Programación": [
         { name: "Java", icon: <FaJava className="text-red-500 text-5xl" /> },
@@ -85,17 +88,18 @@ export default function Skills() {
     return (
         <section id="skills" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-extrabold text-center mb-14 text-zinc-900 dark:text-zinc-100 tracking-tight">Habilidades</h2>
+                <TitleH2 text="Habilidades" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {grouped.map((pair, idx) => (
                         <React.Fragment key={idx}>
                             {pair.map(([category, items]) => (
                                 <div key={category} className="rounded-2xl bg-white/80 dark:bg-zinc-800/80 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700">
-                                    <h3 className="text-2xl font-bold mb-6 text-blue-700 dark:text-blue-300 flex items-center gap-2">
+                                    {/* <h3 className="text-2xl font-bold mb-6 text-blue-700 dark:text-blue-300 flex items-center gap-2">
                                         <span className="inline-block w-2 h-6 bg-blue-500 dark:bg-blue-400 rounded-full mr-2" />
                                         {category}
-                                    </h3>
+                                    </h3> */}
+                                    <TitleH3 text={category} color="blue" />
                                     <SkillsGrid>
                                         {items.map((skill) => (
                                             <SkillCard key={skill.name} skill={skill} />
@@ -109,10 +113,11 @@ export default function Skills() {
 
                 {/* Soft Skills */}
                 <div className="mt-14">
-                    <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-300 flex items-center gap-2">
+                    {/* <h3 className="text-2xl font-bold mb-6 text-green-700 dark:text-green-300 flex items-center gap-2">
                         <span className="inline-block w-2 h-6 bg-green-500 dark:bg-green-400 rounded-full mr-2" />
                         Soft Skills
-                    </h3>
+                    </h3> */}
+                    <TitleH3 text="Soft Skills" color="green" />
                     <div className="flex flex-row gap-[1%] flex-wrap">
                         {softSkills.map((skill) => (
                             <span
