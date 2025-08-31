@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
+import Education from "./components/Education";
 
 export default function App() {
   // Tema inicial desde localStorage o preferencia del sistema
@@ -29,7 +30,7 @@ export default function App() {
       <main>
         <Hero />
         <Skills />
-        <section id="education" className="h-screen bg-gray-200 dark:bg-zinc-700"></section>
+        <Education />
         <section id="experience" className="h-screen bg-gray-300 dark:bg-zinc-600"></section>
       </main>
     </div>
