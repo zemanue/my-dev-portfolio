@@ -16,7 +16,8 @@ export default function Timeline({ timelineElements }) {
                         </div>
                         {/* Card desplazada a la derecha */}
                         <div className="flex-1">
-                            <TimelineCard element={element} />
+                            {/* Quitamos la fecha porque ya se muestra en la línea vertical */}
+                            <TimelineCard element={{ ...element, date: undefined }} />
                         </div>
                     </div>
                 ))}

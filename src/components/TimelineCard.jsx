@@ -11,9 +11,14 @@ export default function TimelineCard({ element }) {
                 {element.place && (
                     <p className="text-sm font-medium text-blue-400 dark:text-blue-500 mb-1">{element.place}</p>
                 )}
-                <p className="text-base text-zinc-800 dark:text-zinc-100 leading-relaxed">
-                    {element.description}
-                </p>
+                {element.date && (
+                    <p className="text-sm text-zinc-500 dark:text-zinc-300 mb-2">{element.date}</p>
+                )}
+                {element.description.split("\n").map((line, idx) => (
+                    <p key={idx} className="text-base text-zinc-800 dark:text-zinc-100 leading-relaxed">
+                        {line}
+                    </p>
+                ))}
             </div>
         </div>
     );
