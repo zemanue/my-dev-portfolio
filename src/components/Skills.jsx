@@ -89,7 +89,7 @@ export default function Skills() {
     return (
         <section id="skills" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <div className="max-w-6xl mx-auto">
-                <TitleH2 text="Habilidades" />
+                <TitleH2>Habilidades</TitleH2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {grouped.map((pair, idx) => (
@@ -100,7 +100,7 @@ export default function Skills() {
                                         <span className="inline-block w-2 h-6 bg-blue-500 dark:bg-blue-400 rounded-full mr-2" />
                                         {category}
                                     </h3> */}
-                                    <TitleH3 text={category} color="blue" />
+                                    <TitleH3 color="blue">{category}</TitleH3>
                                     <SkillsGrid>
                                         {items.map((skill) => (
                                             <SkillCard key={skill.name} skill={skill} />
@@ -118,7 +118,7 @@ export default function Skills() {
                         <span className="inline-block w-2 h-6 bg-green-500 dark:bg-green-400 rounded-full mr-2" />
                         Soft Skills
                     </h3> */}
-                    <TitleH3 text="Habilidades blandas" color="green" />
+                    <TitleH3 color="green">Habilidades blandas</TitleH3>
                     <div className="flex flex-row gap-[1%] flex-wrap">
                         {softSkills.map((skill) => (
                             <span
