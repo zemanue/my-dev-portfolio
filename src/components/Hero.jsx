@@ -1,5 +1,5 @@
-import { Github, Linkedin, Mail } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
+import { FaLinkedin, FaGithub, FaRegEnvelope } from "react-icons/fa6";
 
 export default function Hero() {
     return (
@@ -13,7 +13,7 @@ export default function Hero() {
                     {/* Image */}
                     <div className="rounded-full w-[150px] h-[150px] overflow-hidden">
                         <img
-                            src="/public/Foto 2025.jpeg"
+                            src="/Foto 2025.jpeg"
                             alt="José Manuel Redondo"
                             className="rounded-full"
                         />
@@ -57,7 +57,7 @@ export default function Hero() {
                         aria-label="LinkedIn"
                         className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-300 bg-white hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition"
                     >
-                        <Linkedin />
+                        <FaLinkedin className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
                     </a>
                     <a
                         href="https://github.com/zemanue"
@@ -66,14 +66,14 @@ export default function Hero() {
                         aria-label="GitHub"
                         className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-300 bg-white hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition"
                     >
-                        <Github />
+                        <FaGithub className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
                     </a>
                     <a
                         href="mailto:manureco.97@gmail.com"
                         aria-label="Email"
                         className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-300 bg-white hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition"
                     >
-                        <Mail />
+                        <FaRegEnvelope className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
                     </a>
                 </div>
             </div>

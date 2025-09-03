@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun, Github, Linkedin, Mail } from "lucide-react";
+import { FaBars, FaXmark, FaLinkedin, FaGithub, FaRegEnvelope, FaRegSun, FaRegMoon } from "react-icons/fa6";
 
 const links = [
     { label: "Sobre mí", href: "#about" },
@@ -59,6 +59,17 @@ export default function Navbar({ theme, onToggleTheme }) {
                     ))}
                 </ul>
 
+                {/* Menú móvil */}
+                <button
+                    className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
+                    onClick={() => setOpen((v) => !v)}
+                    aria-expanded={open}
+                    aria-label="Abrir menú"
+                >
+                    {open ? <FaXmark className="h-6 w-6 text-zinc-600 dark:text-zinc-300" /> : <FaBars className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />}
+                </button>
+
+
                 {/* Botones */}
                 <div className="flex items-center gap-2">
                     <a
@@ -68,7 +79,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                         aria-label="LinkedIn"
                         className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
                     >
-                        <Linkedin />
+                        <FaLinkedin className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
                     </a>
                     <a
                         href="https://github.com/zemanue"
@@ -77,14 +88,14 @@ export default function Navbar({ theme, onToggleTheme }) {
                         aria-label="GitHub"
                         className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
                     >
-                        <Github />
+                        <FaGithub className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
                     </a>
                     <a
                         href="mailto:manureco.97@gmail.com"
                         aria-label="Email"
                         className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
                     >
-                        <Mail />
+                        <FaRegEnvelope className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
                     </a>
 
 
@@ -94,18 +105,9 @@ export default function Navbar({ theme, onToggleTheme }) {
                         aria-label="Cambiar tema"
                         className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
                     >
-                        {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                        {theme === "dark" ? <FaRegSun className="animate-rotate-in animate-duration-normal" /> : <FaRegMoon className="animate-rotate-in duration" />}
                     </button>
 
-                    {/* Menú móvil */}
-                    <button
-                        className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
-                        onClick={() => setOpen((v) => !v)}
-                        aria-expanded={open}
-                        aria-label="Abrir menú"
-                    >
-                        {open ? <X /> : <Menu />}
-                    </button>
                 </div>
             </nav>
 
