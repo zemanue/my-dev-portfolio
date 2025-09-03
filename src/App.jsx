@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
+import Projects from "./components/Projects";
 
 export default function App() {
   // Tema inicial desde localStorage o preferencia del sistema
@@ -33,6 +34,7 @@ export default function App() {
         <Skills />
         <Education />
         <WorkExperience />
+        <Projects />
       </main>
     </div>
   );
