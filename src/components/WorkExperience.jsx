@@ -19,13 +19,6 @@ const jobs = [
         description: `Talleres digitales bilingües (inglés y español).\nDesarrollo de videojuegos con Roblox Studio y creación de apps con Thunkable.\nProducción de contenido digital: imágenes y video con aplicaciones como Krita y CapCut, e IA generativa con ChatGPT, Gemini, etc.`
     },
     {
-        title: "Profesor particular",
-        dateStart: "sept. 2015",
-        dateEnd: "jun. 2025",
-        place: "Autónomo",
-        description: `Ed. Primaria y ESO: Matemáticas, Lengua, Inglés...\nExperiencia con necesidades educativas: discapacidad visual, dislexia, discalculia, TDAH...\nCreación y uso de materiales manipulativos y digitales, metodologias activas, etc.\nClases de español a alumnado extranjero.`
-    },
-    {
         title: "Desarrollador de videojuegos",
         dateStart: "mar. 2025",
         dateEnd: "jun. 2025",
