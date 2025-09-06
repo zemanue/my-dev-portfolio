@@ -1,7 +1,11 @@
 import { TypeAnimation } from "react-type-animation";
-import { FaLinkedin, FaGithub, FaRegEnvelope } from "react-icons/fa6";
+
+import SocialIcon from "./SocialIcon";
+
+import { socialLinks } from "../constants/socialLinks";
 
 export default function Hero() {
+
     return (
         <section
             id="home"
@@ -50,31 +54,15 @@ export default function Hero() {
 
                 {/* Social Icons */}
                 <div className="mt-8 flex items-center justify-center gap-5">
-                    <a
-                        href="https://linkedin.com/in/jose-manuel-redondo-conde/"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="LinkedIn"
-                        className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-300 bg-white hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition"
-                    >
-                        <FaLinkedin className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
-                    </a>
-                    <a
-                        href="https://github.com/zemanue"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="GitHub"
-                        className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-300 bg-white hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition"
-                    >
-                        <FaGithub className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
-                    </a>
-                    <a
-                        href="mailto:manureco.97@gmail.com"
-                        aria-label="Email"
-                        className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-zinc-300 bg-white hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition"
-                    >
-                        <FaRegEnvelope className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
-                    </a>
+                    {socialLinks.map(({ href, label, icon }) => (
+                        <SocialIcon
+                            key={label}
+                            size={12}
+                            href={href}
+                            label={label}
+                            icon={icon}
+                        />
+                    ))}
                 </div>
             </div>
         </section>

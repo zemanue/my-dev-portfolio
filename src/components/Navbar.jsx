@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaXmark, FaLinkedin, FaGithub, FaRegEnvelope, FaRegSun, FaRegMoon } from "react-icons/fa6";
+import SocialIcon from "./SocialIcon";
+import { socialLinks } from "../constants/socialLinks";
 
 const links = [
     { label: "Sobre mí", href: "#about" },
@@ -72,32 +74,15 @@ export default function Navbar({ theme, onToggleTheme }) {
 
                 {/* Botones */}
                 <div className="flex items-center gap-2">
-                    <a
-                        href="https://linkedin.com/in/jose-manuel-redondo-conde/"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="LinkedIn"
-                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
-                    >
-                        <FaLinkedin className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
-                    </a>
-                    <a
-                        href="https://github.com/zemanue"
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label="GitHub"
-                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
-                    >
-                        <FaGithub className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
-                    </a>
-                    <a
-                        href="mailto:manureco.97@gmail.com"
-                        aria-label="Email"
-                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
-                    >
-                        <FaRegEnvelope className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />
-                    </a>
-
+                    {socialLinks.map(({ href, label, icon }) => (
+                        <SocialIcon
+                            key={label}
+                            size={10}
+                            href={href}
+                            label={label}
+                            icon={icon}
+                        />
+                    ))}
 
                     {/* Toggle tema */}
                     <button
