@@ -17,7 +17,7 @@ export default function Hero() {
                     {/* Image */}
                     <div className="rounded-full w-[150px] h-[150px] overflow-hidden">
                         <img
-                            src="/Foto 2025.jpeg"
+                            src="Foto 2025.jpeg"
                             alt="José Manuel Redondo"
                             className="rounded-full"
                         />
