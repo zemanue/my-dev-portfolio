@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaXmark, FaLinkedin, FaGithub, FaRegEnvelope, FaRegSun, FaRegMoon } from "react-icons/fa6";
+import { FaBars, FaXmark, FaRegSun, FaRegMoon } from "react-icons/fa6";
 import SocialIcon from "./SocialIcon";
 import { socialLinks } from "../constants/socialLinks";
 
@@ -9,7 +9,6 @@ const links = [
     { label: "Educación", href: "#education" },
     { label: "Experiencia", href: "#experience" },
     { label: "Proyectos", href: "#projects" },
-    { label: "Currículum", href: "#resume" },
 ];
 
 export default function Navbar({ theme, onToggleTheme }) {

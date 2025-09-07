@@ -8,7 +8,7 @@ export default function Hero() {
 
     return (
         <section
-            id="home"
+            id="about"
             className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-4"
         >
             <div className="mx-auto max-w-4xl text-center">
