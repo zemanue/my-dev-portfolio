@@ -72,11 +72,11 @@ export default function Navbar({ theme, onToggleTheme }) {
 
 
                 {/* Botones */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-4">
                     {socialLinks.map(({ href, label, icon }) => (
                         <SocialIcon
                             key={label}
-                            size={10}
+                            size={6}
                             href={href}
                             label={label}
                             icon={icon}
@@ -87,7 +87,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                     <button
                         onClick={onToggleTheme}
                         aria-label="Cambiar tema"
-                        className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white p-2 text-zinc-700 hover:bg-zinc-100 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-500"
+                        className="inline-flex items-center justify-center rounded-full p-2 bg-zinc-200 hover:bg-zinc-300 text-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-100 hover:text-blue-800 dark:hover:text-yellow-300 transition-colors duration-300"
                     >
                         {theme === "dark" ? <FaRegSun className="animate-rotate-in animate-duration-normal" /> : <FaRegMoon className="animate-rotate-in duration" />}
                     </button>

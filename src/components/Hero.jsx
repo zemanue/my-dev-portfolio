@@ -53,11 +53,11 @@ export default function Hero() {
                 </div>
 
                 {/* Social Icons */}
-                <div className="mt-8 flex items-center justify-center gap-5">
+                <div className="mt-8 flex items-center justify-center gap-10">
                     {socialLinks.map(({ href, label, icon }) => (
                         <SocialIcon
                             key={label}
-                            size={12}
+                            size={9}
                             href={href}
                             label={label}
                             icon={icon}
