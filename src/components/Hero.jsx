@@ -44,7 +44,7 @@ export default function Hero() {
                 {/* Botón Descargar CV */}
                 <div className="mt-6">
                     <a
-                        href="/public/CV_Edu ESP José Manuel Redondo 2025.pdf"
+                        href="CV ESP José Manuel Redondo 2025.pdf"
                         download
                         className="inline-block rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition"
                     >
