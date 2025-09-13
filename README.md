@@ -1,12 +1,43 @@
-# React + Vite
+# My Dev Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my developer portfolio! This project showcases my skills, projects, and experience as a software developer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Personal and contact information
+- Skills and technologies overview
+- Education qualifications and recent work experience
+- Project showcase with descriptions and links
 
-## Expanding the ESLint configuration
+✅ Responsive design & mobile-friendly  
+✅ Supports both dark and light modes 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+You can see the [portfolio here](https://zemanue.github.io/my-dev-portfolio/)
+
+## Quick setup
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/my-dev-portfolio.git
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
+4. Customize the template by navigating to the `/src/components` directory. Modify texts, pictures, and other information as needed.
+
+## Technologies Used
+
+- React 19.1
+- Tailwind 4.1
+- JavaScript and JSX
+- Vite 7.
+- [Add any other relevant technologies]
+
+## Contact
+
+Feel free to reach out via [manureco.97@gmail.com](mailto:manureco.97@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/jose-manuel-redondo-conde/).
