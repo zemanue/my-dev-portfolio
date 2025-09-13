@@ -43,7 +43,6 @@ export const techSkills = {
 };
 
 export const softSkills = [
-    "Resolución de problemas",
     "Comunicación",
     "Trabajo en equipo",
     "Proactividad",
