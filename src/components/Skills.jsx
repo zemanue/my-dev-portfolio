@@ -17,7 +17,7 @@ function SkillCard({ skill }) {
     return (
         <div
             key={skill.name}
-            className="flex flex-col items-center p-4 rounded-xl bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 hover:bg-blue-50 dark:hover:bg-zinc-800 shadow transition-all duration-300 hover:scale-105 border border-zinc-200 dark:border-zinc-700"
+            className="flex flex-col items-center p-4 rounded-xl bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow transition-all duration-300 border border-zinc-200 dark:border-zinc-700"
         >
             <span className="mb-2">{skill.icon}</span>
             <span className="mt-1 text-base font-medium tracking-tight text-center break-words w-full">{skill.name}</span>

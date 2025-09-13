@@ -9,7 +9,9 @@ export default function TimelineCard({ element }) {
                         <p className="text-sm font-medium text-blue-400 dark:text-blue-500 mb-1">{element.place}</p>
                     )}
                     {element.dateStart && (
-                        <p className="text-sm text-zinc-500 dark:text-zinc-300 mb-2">{element.dateStart} - {element.dateEnd}</p>
+                        <p className="text-sm text-zinc-500 dark:text-zinc-300 mb-2">
+                            {element.dateStart} {element.dateEnd && `- ${element.dateEnd}`}
+                        </p>
                     )}
                     {element.description.split("\n").map((line, idx) => (
                         <p key={idx} className="text-base text-zinc-800 dark:text-zinc-100 leading-relaxed">
