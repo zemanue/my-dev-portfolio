@@ -7,7 +7,7 @@ export const qualifications = [
         place: "DigitechFP",
         dateStart: "Sept. 2023",
         dateEnd: "Jun. 2025",
-        description: "Formación oficial centrada en desarrollo de software multiplataforma: aplicaciones de escritorio, móviles y web. Aprendizaje de lenguajes como Java, JavaScript y PHP, desarrollo de apps móviles con Android Studio, diseño de interfaces, acceso a bases de datos, etc.",
+        description: "Formación oficial centrada en desarrollo de software multiplataforma: aplicaciones de escritorio, móviles y web. \n Aprendizaje de lenguajes como Java, JavaScript y PHP, desarrollo de apps móviles con Android Studio, diseño de interfaces, acceso a bases de datos, etc.",
         icon: <FaGraduationCap />
     },
     {
