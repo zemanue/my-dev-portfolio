@@ -5,7 +5,7 @@ export const jobs = [
         dateStart: "jun. 2025",
         dateEnd: "actualidad",
         place: "Logiscool (Marbella)",
-        description: `Talleres digitales bilingües (inglés y español).\n Enseñanza de conceptos básicos de programación a niños/adolescentes con enseñanza visual por bloques (tipo Scratch), código y/o mixta. \n Desarrollo de videojuegos con Unity y Roblox Studio y creación de apps con Thunkable.\nProducción de contenido digital y uso de IA generativa.`
+        description: `Talleres digitales bilingües (inglés y español).\n Enseñanza de conceptos básicos de programación a niños/adolescentes con enseñanza visual por bloques (tipo Scratch), código y/o mixta. \n Desarrollo de videojuegos con Unity y Roblox Studio y creación de apps con Thunkable.\n Producción de contenido digital y uso de IA generativa. \n Administración de la academia: uso de CRM, comunicación con familias y clientes potenciales, etc. \n Colaboración con centros educativos para actividades extraescolares: English International College (EIC), British International School of Marbella.`
     },
     {
         id: 3,
