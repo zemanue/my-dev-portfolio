@@ -1,3 +1,4 @@
+import React from "react";
 import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaPhp, FaReact, FaBootstrap, FaUnity, FaGitAlt, FaGithub } from "react-icons/fa6";
 import { TbBrandCSharp } from "react-icons/tb";
 import { SiAndroidstudio, SiGithubcopilot, SiMysql, SiMongodb, SiSpringboot, SiTailwindcss, SiPhpmyadmin, SiOpenai, SiGooglegemini, SiPostman, SiClaude } from "react-icons/si";

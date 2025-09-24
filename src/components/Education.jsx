@@ -1,4 +1,4 @@
-
+import React from "react";
 import TitleH2 from "./TitleH2";
 import Timeline from "./Timeline";
 import { qualifications } from "../constants/education";

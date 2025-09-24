@@ -1,13 +1,28 @@
 import TitleH2 from "./TitleH2";
 import { FaGithub } from "react-icons/fa6";
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import ProjectImageModal from "./ProjectImageModal";
 import { projects } from "../constants/projects";
+
+ProjectCard.propTypes = {
+    project: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        images: PropTypes.arrayOf(PropTypes.string).isRequired,
+        tag: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        skills: PropTypes.arrayOf(PropTypes.string).isRequired,
+        link: PropTypes.string.isRequired,
+    }).isRequired,
+    onImageClick: PropTypes.func.isRequired,
+};
 
 function ProjectCard({ project, onImageClick }) {
     return (
         <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700">
+            {/* Project Title */}
             <h3 className="mt-4 text-center text-2xl font-bold rounded-lg">{project.title}</h3>
+            {/* Image */}
             <img
                 src={project.images[0]}
                 alt={project.title}
@@ -18,6 +33,7 @@ function ProjectCard({ project, onImageClick }) {
             <p className={`inline-block mb-2 px-3 py-1 text-xs font-semibold rounded-full text-white shadow w-fit bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700`}>
                 {project.tag}
             </p>
+            {/* Description */}
             <p className="mt-2 text-zinc-700 dark:text-zinc-300">{project.description}</p>
             {/* Skills */}
             <div className="flex flex-wrap gap-2 mt-2">
@@ -27,6 +43,7 @@ function ProjectCard({ project, onImageClick }) {
                     </span>
                 ))}
             </div>
+            {/* Link */}
             <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-fit mt-4 inline-block border rounded-md bg-transparent px-4 py-2 text-zinc-900 hover:bg-zinc-200 dark:text-zinc-100 hover:dark:bg-zinc-700 border-zinc-300 dark:border-zinc-600 transition-colors duration-300 font-medium">
                 <FaGithub className="inline mr-2 mb-1" /> Ver en GitHub
             </a>

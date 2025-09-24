@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { FaBars, FaXmark, FaRegSun, FaRegMoon } from "react-icons/fa6";
 import SocialIcon from "./SocialIcon";
 import { socialLinks } from "../constants/socialLinks";
@@ -10,6 +11,11 @@ const links = [
     { label: "Experiencia", href: "#experience" },
     { label: "Proyectos", href: "#projects" },
 ];
+
+Navbar.propTypes = {
+    theme: PropTypes.oneOf(["light", "dark"]).isRequired,
+    onToggleTheme: PropTypes.func.isRequired,
+};
 
 export default function Navbar({ theme, onToggleTheme }) {
     const [open, setOpen] = useState(false);

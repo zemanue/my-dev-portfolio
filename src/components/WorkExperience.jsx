@@ -1,3 +1,4 @@
+import React from "react";
 import { FaBriefcase } from "react-icons/fa6";
 
 import TitleH2 from "./TitleH2";

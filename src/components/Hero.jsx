@@ -1,3 +1,4 @@
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
 import SocialIcon from "./SocialIcon";

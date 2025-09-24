@@ -1,5 +1,16 @@
 import TimelineCard from "./TimelineCard";
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
+Timeline.propTypes = {
+    timelineElements: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        title: PropTypes.string.isRequired,
+        dateStart: PropTypes.string,
+        dateEnd: PropTypes.string,
+        content: PropTypes.node.isRequired,
+    })).isRequired,
+};
 
 export default function Timeline({ timelineElements }) {
     const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' ? window.innerWidth < 640 : false);

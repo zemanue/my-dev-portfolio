@@ -1,7 +1,18 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa6";
 
+TimelineCard.propTypes = {
+    element: PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        title: PropTypes.string.isRequired,
+        place: PropTypes.string,
+        dateStart: PropTypes.string,
+        dateEnd: PropTypes.string,
+        description: PropTypes.string,
+        icon: PropTypes.element,
+    }).isRequired,
+};
 
 export default function TimelineCard({ element }) {
     const [expanded, setExpanded] = useState(false);

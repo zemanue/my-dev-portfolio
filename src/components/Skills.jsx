@@ -1,9 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import TitleH2 from "./TitleH2";
 import TitleH3 from "./TitleH3";
 
 import { techSkills, softSkills } from "../constants/skills";
+
+SkillsGrid.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 function SkillsGrid({ children }) {
     return (
@@ -12,6 +17,13 @@ function SkillsGrid({ children }) {
         </div>
     );
 }
+
+SkillCard.propTypes = {
+    skill: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        icon: PropTypes.element.isRequired,
+    }).isRequired,
+};
 
 function SkillCard({ skill }) {
     return (

@@ -1,5 +1,14 @@
 import React, { useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { FaArrowRight, FaArrowLeft, FaXmark } from "react-icons/fa6";
+
+ProjectImageModal.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    currentIndex: PropTypes.number.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onNext: PropTypes.func.isRequired,
+    onPrev: PropTypes.func.isRequired,
+};
 
 export default function ProjectImageModal({ images, currentIndex, onClose, onPrev, onNext }) {
     // Refs y efectos para manejar eventos de teclado, scroll y touch

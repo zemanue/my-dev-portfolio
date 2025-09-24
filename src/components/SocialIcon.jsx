@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const sizeMap = {
     4: "h-4 w-4",
@@ -10,6 +11,13 @@ const sizeMap = {
     10: "h-10 w-10",
     11: "h-11 w-11",
     12: "h-12 w-12",
+};
+
+SocialIcon.propTypes = {
+    size: PropTypes.oneOf([4, 5, 6, 7, 8, 9, 10, 11, 12]),
+    label: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    icon: PropTypes.element.isRequired,
 };
 
 export default function SocialIcon({ size = 7, label, href, icon }) {

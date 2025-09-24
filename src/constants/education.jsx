@@ -1,3 +1,4 @@
+import React from "react";
 import { FaGraduationCap } from "react-icons/fa6";
 
 export const qualifications = [
