@@ -1,6 +1,7 @@
 import TitleH2 from "./TitleH2";
 import { FaGithub } from "react-icons/fa6";
 import { FaSearchPlus } from "react-icons/fa";
+import { BsNintendoSwitch } from "react-icons/bs";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ProjectImageModal from "./ProjectImageModal";
@@ -13,12 +14,31 @@ ProjectCard.propTypes = {
         tag: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         skills: PropTypes.arrayOf(PropTypes.string).isRequired,
-        link: PropTypes.string.isRequired,
+        links: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired,
+        })).isRequired,
     }).isRequired,
     onImageClick: PropTypes.func.isRequired,
 };
 
 function ProjectCard({ project, onImageClick }) {
+
+    const getLinkStyles = (color) => {
+        const styles = {
+            github: "bg-transparent hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100 border-zinc-300 dark:border-zinc-600",
+            nintendo: "bg-red-600 hover:bg-red-700 text-white border-red-600",
+        };
+        return styles[color] || styles.github;
+    };
+
+    const getLinkIcon = (color) => {
+        if (color === "github") return <FaGithub className="inline mr-2 mb-1" />;
+        if (color === "nintendo") return <BsNintendoSwitch className="inline mr-2 mb-1" />;
+        return null;
+    };
+    
     return (
         <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700">
             {/* Project Title */}
@@ -65,10 +85,21 @@ function ProjectCard({ project, onImageClick }) {
                     </span>
                 ))}
             </div>
-            {/* Link */}
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-fit mt-4 inline-block border rounded-md bg-transparent px-4 py-2 text-zinc-900 hover:bg-zinc-200 dark:text-zinc-100 hover:dark:bg-zinc-700 border-zinc-300 dark:border-zinc-600 transition-colors duration-300 font-medium">
-                <FaGithub className="inline mr-2 mb-1" /> Ver en GitHub
-            </a>
+            {/* Links */}
+            <div className="flex flex-wrap gap-3 mt-4">
+                {project.links.map((link, index) => (
+                    <a
+                        key={index}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`w-fit inline-block border rounded-md px-4 py-2 transition-colors duration-300 font-medium ${getLinkStyles(link.color)}`}
+                    >
+                        {getLinkIcon(link.color)}
+                        {link.text}
+                    </a>
+                ))}
+            </div>
         </div>
     );
 }
