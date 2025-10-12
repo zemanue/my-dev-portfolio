@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaPhp, FaReact, FaBootstrap, FaUnity, FaGitAlt, FaGithub } from "react-icons/fa6";
+import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaPhp, FaReact, FaBootstrap, FaUnity, FaGitAlt, FaGithub, FaMasksTheater } from "react-icons/fa6";
 import { TbBrandCSharp } from "react-icons/tb";
 import { SiAndroidstudio, SiGithubcopilot, SiMysql, SiMongodb, SiSpringboot, SiTailwindcss, SiPhpmyadmin, SiOpenai, SiGooglegemini, SiPostman, SiClaude } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
@@ -19,7 +19,8 @@ export const techSkills = {
         { name: "Spring Boot", icon: <SiSpringboot className="text-green-500 text-5xl" /> },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 text-5xl" /> },
         { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500 text-5xl" /> },
-        { name: "Unity", icon: <FaUnity className="text-black-900 text-5xl" /> },
+        { name: "Playwright", icon: <FaMasksTheater className="text-pink-500 text-5xl" /> },
+
     ],
     "Bases de Datos": [
         { name: "MySQL", icon: <SiMysql className="text-blue-800 text-5xl" /> },
@@ -33,6 +34,7 @@ export const techSkills = {
     "Entornos y Herramientas": [
         { name: "Visual Studio Code", icon: <BiLogoVisualStudio className="text-blue-500 text-5xl" /> },
         { name: "Android Studio", icon: <SiAndroidstudio className="text-green-500 text-5xl" /> },
+        { name: "Unity", icon: <FaUnity className="text-black-900 text-5xl" /> },
         { name: "Postman", icon: <SiPostman className="text-orange-500 text-5xl" /> },
     ],
     "IA y Asistentes": [

@@ -5,7 +5,7 @@ export const jobs = [
         dateStart: "jun. 2025",
         dateEnd: "actualidad",
         place: "Logiscool (Marbella)",
-        description: `Talleres digitales bilingües (inglés y español).\n Enseñanza de conceptos básicos de programación a niños/adolescentes con enseñanza visual por bloques (tipo Scratch), código y/o mixta. \n Desarrollo de videojuegos con Unity y Roblox Studio y creación de apps con Thunkable.\n Producción de contenido digital y uso de IA generativa. \n Administración de la academia: uso de CRM, comunicación con familias y clientes potenciales, etc. \n Colaboración con centros educativos para actividades extraescolares: English International College (EIC), British International School of Marbella.`
+        description: `Talleres digitales bilingües (inglés y español) a niños/as y adolescentes. \n Enseñanza de conceptos básicos de programación con enseñanza visual por bloques (tipo Scratch), código y/o mixta. \n Introducción a Python y desarrollo de videjuegos con Unity. \n Colaboración con centros educativos para actividades extraescolares: English International College (EIC) y British International School of Marbella (BISM). \n Administración de la academia: uso de CRM, comunicación con familias y clientes potenciales, etc.`
     },
     {
         id: 3,
@@ -13,7 +13,7 @@ export const jobs = [
         dateStart: "ago. 2025",
         dateEnd: "sept. 2025",
         place: "Mainjobs (Marbella)",
-        description: `Enseñanza de competencias digitales a niños/as y adolescentes.\nPrograma estatal gratuito y a través de proyectos gamificados.`
+        description: `Enseñanza de competencias digitales a niños/as y adolescentes. \n Programa estatal gratuito y a través de proyectos gamificados.`
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const jobs = [
         dateStart: "mar. 2025",
         dateEnd: "jun. 2025",
         place: "Bimfloat, Málaga (Prácticas DAM)",
-        description: `Desarrollo de novelas visuales infantiles con Unity y la extensión Naninovel.\nConfiguración de prefabs, escenas, scripts en C#, etc.\nUso de IA Generativa para historias e imágenes(ChatGPT, Gemini, extensión Stable Difussion en Krita).`
+        description: `Desarrollo de novelas visuales infantiles con Unity y la extensión Naninovel. \n Configuración de prefabs, escenas, scripts en C#, etc. \n Uso de IA Generativa para historias e imágenes(ChatGPT, Gemini, extensión Stable Difussion en Krita).`
     },
     {
         id: 1,
@@ -29,6 +29,6 @@ export const jobs = [
         dateStart: "sept. 2015",
         dateEnd: "jun. 2025",
         place: "Autónomo",
-        description: `Ed. Primaria y ESO: Matemáticas, Lengua, Inglés...\nExperiencia con necesidades educativas: discapacidad visual, dislexia, discalculia, TDAH...\nCreación y uso de materiales manipulativos y digitales, metodologias activas, etc.\nClases de español a alumnado extranjero.`
+        description: `Ed. Primaria y ESO: Matemáticas, Lengua, Inglés...\n Experiencia con necesidades educativas: discapacidad visual, dislexia, discalculia, TDAH... \n Creación y uso de materiales manipulativos y digitales, metodologias activas, etc. \n Clases de español a alumnado extranjero.`
     }
 ];
