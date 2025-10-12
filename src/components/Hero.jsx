@@ -2,16 +2,14 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
 import SocialIcon from "./SocialIcon";
+import ScrollDownIndicator from "./ScrollDownIndicator";
 
 import { socialLinks } from "../constants/socialLinks";
 
 export default function Hero() {
 
     return (
-        <section
-            id="about"
-            className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-4"
-        >
+        <section id="about" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-4">
             <div className="mx-auto max-w-4xl text-center">
                 {/* About Section */}
                 <div className="flex items-center justify-center gap-8 flex-wrap">
@@ -73,6 +71,8 @@ export default function Hero() {
                     ))}
                 </div>
             </div>
+
+            <ScrollDownIndicator targetId="skills" />
         </section>
     );
 }
