@@ -1,5 +1,6 @@
 import TitleH2 from "./TitleH2";
 import { FaGithub } from "react-icons/fa6";
+import { FaSearchPlus } from "react-icons/fa";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import ProjectImageModal from "./ProjectImageModal";
@@ -22,13 +23,34 @@ function ProjectCard({ project, onImageClick }) {
         <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700">
             {/* Project Title */}
             <h3 className="mt-4 text-center text-2xl font-bold rounded-lg">{project.title}</h3>
-            {/* Image */}
-            <img
-                src={project.images[0]}
-                alt={project.title}
-                className="h-48 w-full rounded-md object-cover hover:scale-112 transition-transform duration-300 cursor-pointer"
+            {/* Image with Overlay */}
+            <div
+                className="relative group cursor-pointer overflow-hidden rounded-md"
                 onClick={() => onImageClick(project.images, 0)}
-            />
+            >
+                <img
+                    src={project.images[0]}
+                    alt={project.title}
+                    className="h-48 w-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                    <FaSearchPlus className="text-4xl mb-2" />
+                    <span className="text-lg font-semibold">Ver galería</span>
+                    {project.images.length > 1 && (
+                        <span className="text-sm mt-1">
+                            {project.images.length} {project.images.length === 1 ? 'foto' : 'fotos'}
+                        </span>
+                    )}
+                </div>
+                {/* Badge permanente para móvil (esquina inferior derecha) */}
+                <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded-md text-xs flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-0 transition-opacity">
+                    <FaSearchPlus className="text-sm" />
+                    {project.images.length > 1 && (
+                        <span>{project.images.length}</span>
+                    )}
+                </div>
+            </div>
             {/* Tag */}
             <p className={`inline-block mb-2 px-3 py-1 text-xs font-semibold rounded-full text-white shadow w-fit bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700`}>
                 {project.tag}
