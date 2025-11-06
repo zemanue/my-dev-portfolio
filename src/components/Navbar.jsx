@@ -41,7 +41,7 @@ export default function Navbar({ theme, onToggleTheme }) {
     }, []);
 
     return (
-        <header className="sticky top-0 z-50 border-b border-zinc-200/50 dark:border-zinc-800/60 backdrop-blur supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:dark:bg-zinc-900/70">
+        <header className="sticky top-0 z-50 border-b border-zinc-200/50 dark:border-zinc-800/60 backdrop-blur supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:dark:bg-zinc-900/70 animate-shrink-header [animation-timeline:scroll(root)] [animation-range:0_200px]">
             <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
                 {/* Logo */}
                 {/* <a href="#" className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                         <li key={l.href}>
                             <a
                                 href={l.href}
-                                className={`text-sm font-medium transition-colors ${active === l.href.replace("#", "")
+                                className={`font-medium transition-colors ${active === l.href.replace("#", "")
                                     ? "text-blue-600 dark:text-blue-400"
                                     : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
                                     }`}
@@ -78,7 +78,7 @@ export default function Navbar({ theme, onToggleTheme }) {
 
 
                 {/* Botones */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-6 w-auto h-fit">
                     {socialLinks.map(({ href, label, icon }) => (
                         <SocialIcon
                             key={label}
@@ -93,9 +93,11 @@ export default function Navbar({ theme, onToggleTheme }) {
                     <button
                         onClick={onToggleTheme}
                         aria-label="Cambiar tema"
-                        className="inline-flex items-center justify-center rounded-full p-2 bg-zinc-200 hover:bg-zinc-300 text-zinc-700 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-100 hover:text-blue-800 dark:hover:text-yellow-300 transition-colors duration-300"
+                        className="inline-flex items-center justify-center rounded-full p-2 hover:bg-zinc-200 text-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-100 hover:text-blue-800 dark:hover:text-yellow-300 transition-colors duration-300"
                     >
-                        {theme === "dark" ? <FaRegSun className="animate-rotate-in animate-duration-normal" /> : <FaRegMoon className="animate-rotate-in duration" />}
+                        {theme === "dark" ?
+                            <FaRegSun className="animate-rotate-in animate-duration-normal" /> :
+                            <FaRegMoon className="animate-rotate-in duration" />}
                     </button>
 
                 </div>
