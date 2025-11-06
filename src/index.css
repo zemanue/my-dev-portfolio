@@ -1,3 +1,13 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --animate-shrink-header: shrink-header linear both;
+
+    @keyframes shrink-header {
+        to {
+            font-size: 0.85rem;
+        }
+    }
+}
