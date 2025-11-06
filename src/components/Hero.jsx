@@ -63,7 +63,7 @@ export default function Hero() {
                     {socialLinks.map(({ href, label, icon }) => (
                         <SocialIcon
                             key={label}
-                            size={9}
+                            size="text-4xl"
                             href={href}
                             label={label}
                             icon={icon}

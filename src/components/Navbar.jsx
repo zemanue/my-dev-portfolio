@@ -82,7 +82,7 @@ export default function Navbar({ theme, onToggleTheme }) {
                     {socialLinks.map(({ href, label, icon }) => (
                         <SocialIcon
                             key={label}
-                            size={6}
+                            scale="scale-150"
                             href={href}
                             label={label}
                             icon={icon}
