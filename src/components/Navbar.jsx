@@ -96,8 +96,8 @@ export default function Navbar({ theme, onToggleTheme }) {
                         className="inline-flex items-center justify-center rounded-full p-2 hover:bg-zinc-200 text-zinc-700 dark:hover:bg-zinc-800 dark:text-zinc-100 hover:text-blue-800 dark:hover:text-yellow-300 transition-colors duration-300"
                     >
                         {theme === "dark" ?
-                            <FaRegSun className="animate-rotate-in animate-duration-normal" /> :
-                            <FaRegMoon className="animate-rotate-in duration" />}
+                            <FaRegSun className="animate-rotate-in" /> :
+                            <FaRegMoon className="animate-rotate-in" />}
                     </button>
 
                 </div>
