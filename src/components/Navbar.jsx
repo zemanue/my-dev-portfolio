@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { FaBars, FaXmark, FaRegSun, FaRegMoon } from "react-icons/fa6";
 import SocialIcon from "./SocialIcon";
 import { socialLinks } from "../constants/socialLinks";
+import JMRLogo from "./icons/JMRLogo";
 
 const links = [
     { label: "Sobre mí", href: "#about" },
@@ -44,10 +45,10 @@ export default function Navbar({ theme, onToggleTheme }) {
         <header className="sticky top-0 z-50 border-b border-zinc-200/50 dark:border-zinc-800/60 backdrop-blur supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:dark:bg-zinc-900/70 animate-shrink-header [animation-timeline:scroll(root)] [animation-range:0_200px]">
             <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
                 {/* Logo */}
-                {/* <a href="#" className="flex items-center gap-2">
-                    <span className="inline-block h-6 w-6 rounded-sm bg-rose-500" />
-                    <span className="text-lg font-semibold tracking-tight">Lorem</span>
-                </a> */}
+                <a href="#about" className="flex items-center gap-2 h-8">
+                    <JMRLogo className="h-full w-auto fill-zinc-700 dark:fill-zinc-300 transition-colors duration-300" />
+                    {/* <span className="text-lg font-semibold tracking-tight"></span> */}
+                </a>
 
                 {/* Links desktop */}
                 <ul className="hidden items-center gap-6 md:flex">
@@ -104,26 +105,28 @@ export default function Navbar({ theme, onToggleTheme }) {
             </nav>
 
             {/* Dropdown móvil */}
-            {open && (
-                <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800">
-                    <ul className="mx-auto max-w-6xl px-4 py-3 space-y-2">
-                        {links.map((l) => (
-                            <li key={l.href}>
-                                <a
-                                    href={l.href}
-                                    className={`block rounded-md px-3 py-2 text-sm font-medium ${active === l.href.replace("#", "")
-                                        ? "bg-blue-600 text-white"
-                                        : "hover:bg-zinc-100 dark:hover:bg-zinc-800"
-                                        }`}
-                                    onClick={() => setOpen(false)}
-                                >
-                                    {l.label}
-                                </a>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-        </header>
+            {
+                open && (
+                    <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800">
+                        <ul className="mx-auto max-w-6xl px-4 py-3 space-y-2">
+                            {links.map((l) => (
+                                <li key={l.href}>
+                                    <a
+                                        href={l.href}
+                                        className={`block rounded-md px-3 py-2 text-sm font-medium ${active === l.href.replace("#", "")
+                                            ? "bg-blue-600 text-white"
+                                            : "hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                                            }`}
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        {l.label}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )
+            }
+        </header >
     );
 }
