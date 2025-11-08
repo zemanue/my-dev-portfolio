@@ -2,13 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-html {
-    scroll-behavior: smooth;
 @layer components {
     .element-to-reveal {
         animation: reveal 1s ease-in both;
         animation-timeline: view();
-        animation-range: 10% cover 40%;
+        animation-range: 10% cover 30%;
     }
 }
 
@@ -37,7 +35,7 @@ html {
     @keyframes reveal {
         from {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
             filter: blur(1.5px);
         }
         to {
