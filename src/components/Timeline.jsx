@@ -26,10 +26,10 @@ export default function Timeline({ timelineElements }) {
     return (
         <div className="relative pl-10">
             {/* Línea vertical */}
-            <div className="absolute left-4 top-0 w-1 h-full bg-blue-400 dark:bg-blue-500 rounded-full" style={{ zIndex: 0 }} />
+            <div className="absolute left-4 top-0 w-1 h-full bg-blue-400 dark:bg-blue-500 rounded-full element-to-reveal" style={{ zIndex: 0 }} />
             <div className="flex flex-col gap-8">
                 {timelineElements.map((element) => (
-                    <div key={element.id} className="relative flex items-start">
+                    <div key={element.id} className="relative flex items-start element-to-reveal">
                         {/* Fecha a la izquierda solo en sm+ */}
                         {!isMobile && (
                             <div className="flex flex-col items-end justify-center min-w-0 pr-2 pt-2">

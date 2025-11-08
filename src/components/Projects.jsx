@@ -40,7 +40,7 @@ function ProjectCard({ project, onImageClick }) {
     };
     
     return (
-        <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700">
+        <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700 element-to-reveal">
             {/* Project Title */}
             <h3 className="mt-4 text-center text-2xl font-bold rounded-lg">{project.title}</h3>
             {/* Image with Overlay */}

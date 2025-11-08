@@ -19,7 +19,7 @@ export default function TimelineCard({ element }) {
     const descriptionLines = (element.description || "").split('\n');
 
     return (
-        <div className="rounded-2xl text-zinc-900 dark:text-zinc-100 bg-blue-50 dark:bg-zinc-800/50 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700 hover:bg-blue-100 dark:hover:bg-zinc-800 transition-colors">
+        <div className="rounded-2xl text-zinc-900 dark:text-zinc-100 bg-blue-50 dark:bg-zinc-800/50 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700 hover:bg-blue-100 dark:hover:bg-zinc-800 transition-colors element-to-reveal">
             <div className="flex flex-row gap-3 mr-4 mt-1 text-2xl flex-shrink-0 cursor-pointer" onClick={() => setExpanded((prev) => !prev)}>
                 <div className="flex items-start w-7 h-7">{element.icon}</div>
                 <div>

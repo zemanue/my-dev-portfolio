@@ -12,7 +12,7 @@ SkillsGrid.propTypes = {
 
 function SkillsGrid({ children }) {
     return (
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
             {children}
         </div>
     );
@@ -63,7 +63,7 @@ export default function Skills() {
                     {grouped.map((pair, idx) => (
                         <React.Fragment key={idx}>
                             {pair.map(([category, items]) => (
-                                <div key={category} className="rounded-2xl bg-white/80 dark:bg-zinc-800/80 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700">
+                                <div key={category} className="rounded-2xl bg-white/80 dark:bg-zinc-800/80 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700 element-to-reveal">
                                     <TitleH3 color="blue">{category}</TitleH3>
                                     <SkillsGrid>
                                         {items.map((skill) => (
@@ -77,7 +77,7 @@ export default function Skills() {
                 </div>
 
                 {/* Soft Skills */}
-                <div className="mt-14">
+                <div className="mt-14 element-to-reveal">
                     <TitleH3 color="green">Habilidades blandas</TitleH3>
                     <div className="flex flex-row gap-[1%] flex-wrap">
                         {softSkills.map((skill) => (
