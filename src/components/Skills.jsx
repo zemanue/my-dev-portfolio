@@ -77,13 +77,13 @@ export default function Skills() {
                 </div>
 
                 {/* Soft Skills */}
-                <div className="flex flex-col items-center mt-14 element-to-reveal">
+                <div className="flex flex-col items-center mt-14">
                     <TitleH3 color="green">Habilidades blandas</TitleH3>
                     <div className="flex flex-wrap justify-center gap-3 mt-6">
                         {softSkills.map((skill) => (
                             <span
                                 key={skill}
-                                className="px-5 py-2.5 rounded-lg bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/40 dark:to-green-800/40 text-green-800 dark:text-green-200 font-medium text-sm border border-green-200/50 dark:border-green-700/50 shadow-sm hover:shadow-md hover:scale-103 transition-all duration-200"
+                                className="px-5 py-2.5 rounded-lg bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/40 dark:to-green-800/40 text-green-800 dark:text-green-200 font-medium text-sm border border-green-200/50 dark:border-green-700/50 shadow-sm hover:shadow-md hover:scale-103 transition-all duration-200 element-to-reveal"
                             >
                                 {skill}
                             </span>
