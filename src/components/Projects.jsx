@@ -78,7 +78,7 @@ function ProjectCard({ project, onImageClick }) {
             {/* Description */}
             <p className="mt-2 text-zinc-700 dark:text-zinc-300">{project.description}</p>
             {/* Skills */}
-            <div className="flex flex-wrap gap-2 mt-2">
+            <div translate="no" className="flex flex-wrap gap-2 mt-2">
                 {project.skills.map((skill) => (
                     <span key={skill} className="inline-block bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
                         {skill}

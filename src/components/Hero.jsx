@@ -41,7 +41,7 @@ export default function Hero() {
                     </div>
                 </div>
                 {/* Botones Descargar CV */}
-                <div className="mt-6 flex gap-4 justify-center">
+                <div translate="no" className="mt-6 flex gap-4 justify-center">
                     <a
                         href="CV ESP José Manuel Redondo 2025.pdf"
                         download

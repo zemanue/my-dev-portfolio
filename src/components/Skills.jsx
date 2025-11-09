@@ -33,7 +33,7 @@ function SkillCard({ skill }) {
             className="relative flex flex-col items-center p-4 rounded-xl bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow transition-all duration-300 border border-zinc-200 dark:border-zinc-700 hover:scale-105 hover:shadow-xl focus:scale-105 focus:shadow-xl focus:outline-none group cursor-pointer"
         >
             <span className="mb-2">{skill.icon}</span>
-            <span className="mt-1 text-base font-medium tracking-tight text-center break-words w-full">{skill.name}</span>
+            <span translate="no" className="mt-1 text-base font-medium tracking-tight text-center break-words w-full">{skill.name}</span>
 
             {/* Tooltip */}
             {skill.description && (
