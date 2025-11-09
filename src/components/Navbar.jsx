@@ -44,40 +44,43 @@ export default function Navbar({ theme, onToggleTheme }) {
     return (
         <header className="sticky top-0 z-50 border-b border-zinc-200/50 dark:border-zinc-800/60 backdrop-blur supports-[backdrop-filter]:bg-white/70 supports-[backdrop-filter]:dark:bg-zinc-900/70 animate-shrink-header [animation-timeline:scroll(root)] [animation-range:0_200px]">
             <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-                {/* Logo */}
-                <a href="#about" className="flex items-center gap-2 h-8">
-                    <JMRLogo className="h-full w-auto fill-zinc-700 dark:fill-zinc-300 transition-colors duration-300" />
-                    {/* <span className="text-lg font-semibold tracking-tight"></span> */}
-                </a>
+                <div className="flex gap-10">
+                    {/* Logo */}
+                    <a href="#about" className="flex items-center gap-2 h-8">
+                        <JMRLogo className="h-full w-auto fill-zinc-700 dark:fill-zinc-300 transition-colors duration-300" />
+                        {/* <span className="text-lg font-semibold tracking-tight"></span> */}
+                    </a>
 
-                {/* Links desktop */}
-                <ul className="hidden items-center gap-6 md:flex">
-                    {links.map((l) => (
-                        <li key={l.href}>
-                            <a
-                                href={l.href}
-                                className={`font-medium transition-colors ${active === l.href.replace("#", "")
-                                    ? "text-blue-600 dark:text-blue-400"
-                                    : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-                                    }`}
-                            >
-                                {l.label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+                    {/* Links Secciones */}
+                    <ul className="hidden items-center gap-6 md:flex">
+                        {links.map((l) => (
+                            <li key={l.href}>
+                                <a
+                                    href={l.href}
+                                    className={`font-medium transition-colors ${active === l.href.replace("#", "")
+                                        ? "text-blue-600 dark:text-blue-400"
+                                        : "text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
+                                        }`}
+                                >
+                                    {l.label}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
 
-                {/* Menú móvil */}
-                <button
-                    className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
-                    onClick={() => setOpen((v) => !v)}
-                    aria-expanded={open}
-                    aria-label="Abrir menú"
-                >
-                    {open ? <FaXmark className="h-6 w-6 text-zinc-600 dark:text-zinc-300" /> : <FaBars className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />}
-                </button>
+                    {/* Menú hamburguesa para móvil */}
+                    <button
+                        className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
+                        onClick={() => setOpen((v) => !v)}
+                        aria-expanded={open}
+                        aria-label="Abrir menú"
+                    >
+                        {open ? <FaXmark className="h-6 w-6 text-zinc-600 dark:text-zinc-300" /> : <FaBars className="h-6 w-6 text-zinc-600 dark:text-zinc-300" />}
+                    </button>
 
 
+
+                </div>
                 {/* Botones */}
                 <div className="flex items-center gap-6 w-auto h-fit">
                     {socialLinks.map(({ href, label, icon }) => (
