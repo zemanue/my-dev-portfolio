@@ -11,7 +11,7 @@ export default function ScrollDownIndicator({ targetId, text = "Ver más" }) {
     return (
         <a
             href={`#${targetId}`}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer group"
+            className="my-4 flex flex-col items-center gap-2 text-zinc-600 dark:text-zinc-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer group"
             aria-label="Scroll to next section"
         >
             <span className="text-sm font-medium">{text}</span>
