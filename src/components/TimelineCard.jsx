@@ -24,10 +24,27 @@ export default function TimelineCard({ element, showDatesInline = false }) {
         .split("\n")
         .filter((line) => line.trim() !== "");
 
+    const toggleExpand = () => setExpanded((prev) => !prev);
+
+    const handleKeyDown = (e) => {
+        // Permitir la interacción mediante espacio o Enter al enfocar el padre
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleExpand();
+        }
+    };
+
     return (
         <div
-            onClick={() => setExpanded((prev) => !prev)}
-            className="group relative element-to-reveal cursor-pointer rounded-xl sm:rounded-2xl text-zinc-900 dark:text-zinc-100 bg-white/80 dark:bg-zinc-900/80 backdrop-blur p-4 sm:p-6 border border-zinc-200 dark:border-zinc-800 shadow-xs shadow-zinc-300 dark:shadow-none transition-all duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-zinc-500/25 hover:border-zinc-700/25 dark:hover:border-zinc-300/25 focus:shadow-xl focus:shadow-zinc-800/25 dark:focus:shadow-zinc-200/25 focus:border-indigo-400/25"
+            tabIndex={0}
+            role="button"
+            aria-expanded={expanded}
+            aria-label={`Ver detalles de ${element.title}`}
+            onClick={toggleExpand}
+            onKeyDown={handleKeyDown}
+            className="group relative element-to-reveal cursor-pointer rounded-xl sm:rounded-2xl text-zinc-900 dark:text-zinc-100 bg-white/80 dark:bg-zinc-900/80 backdrop-blur p-4 sm:p-6 border border-zinc-200 dark:border-zinc-800 shadow-xs shadow-zinc-300 dark:shadow-none transition-all duration-300 ease-in-out 
+            hover:shadow-lg dark:hover:shadow-zinc-500/25 hover:border-zinc-700/25 dark:hover:border-zinc-300/25 
+            focus:shadow-lg dark:focus:shadow-zinc-500/25 focus:border-indigo-400/25"
         >
             <div className="flex items-start justify-between gap-3">
                 <div className="flex items-start gap-3 min-w-0 flex-1">
@@ -61,16 +78,16 @@ export default function TimelineCard({ element, showDatesInline = false }) {
                 </div>
 
                 {/* Botón desplegable */}
-                <button
-                    aria-label="Toggle details"
-                    className="flex-shrink-0 p-1 rounded-lg text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 transition-colors"
+                <div
+                    tabIndex={-1}
+                    className="flex-shrink-0 p-1 rounded-lg text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-700 dark:group-hover:text-zinc-200 group-focus:text-zinc-700 dark:group-focus:text-zinc-200 transition-colors"
                 >
                     {expanded ? (
                         <FaAngleUp className="w-4 h-4" />
                     ) : (
                         <FaAngleDown className="w-4 h-4" />
                     )}
-                </button>
+                </div>
             </div>
 
             {/* Descripción desplegable */}
