@@ -8,7 +8,7 @@ export const socialLinks = [
         icon: <FaLinkedin />,
     },
     {
-        href: "https://github.com/zemanue",
+        href: "https://github.com/manu-reco",
         label: "GitHub",
         icon: <FaGithub />,
     },

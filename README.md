@@ -12,13 +12,13 @@ Welcome to my developer portfolio! This project showcases my skills, projects, a
 ✅ Responsive design & mobile-friendly  
 ✅ Supports both dark and light modes 
 
-You can see the [portfolio here](https://zemanue.github.io/my-dev-portfolio/)
+You can see the [portfolio here](https://manu-reco.github.io/my-dev-portfolio/)
 
 ## Quick setup
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/my-dev-portfolio.git
+    git clone https://github.com/manu-reco/my-dev-portfolio.git
     ```
 2. Install dependencies:
     ```bash
