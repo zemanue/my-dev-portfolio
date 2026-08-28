@@ -12,7 +12,7 @@ SkillsGrid.propTypes = {
 
 function SkillsGrid({ children }) {
     return (
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-4">
             {children}
         </div>
     );
@@ -30,22 +30,25 @@ function SkillCard({ skill }) {
     return (
         <div
             tabIndex={0}
-            className="group relative flex flex-col items-center p-4 rounded-xl bg-white/80 dark:bg-zinc-900/90 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800 shadow-xs shadow-zinc-300 dark:shadow-none transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-zinc-800/25 dark:hover:shadow-zinc-200/25 hover:border-zinc-700/25 dark:hover:border-zinc-300/25 hover:z-30 focus:scale-105 focus:shadow-xl focus:shadow-zinc-800/25 dark:focus:shadow-zinc-200/25 focus:border-indigo-400/25 focus:z-30 focus:outline-none"
+            className="group relative flex items-center justify-start gap-2.5 p-2 sm:p-3 sm:flex-col sm:justify-center rounded-lg sm:rounded-xl bg-white/80 dark:bg-zinc-900/90 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800 shadow-xs shadow-zinc-300 dark:shadow-none transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-zinc-800/25 dark:hover:shadow-zinc-200/25 hover:border-zinc-700/25 dark:hover:border-zinc-300/25 hover:z-30 focus:scale-105 focus:shadow-xl focus:shadow-zinc-800/25 dark:focus:shadow-zinc-200/25 focus:border-indigo-400/25 focus:z-30 focus:outline-none"
         >
-            <span className="mb-2 group-hover:rotate-6 group-focus:rotate-6 transition-transform duration-300">{skill.icon}</span>
-            <span translate="no" className="mt-1 text-sm font-medium tracking-tight text-center break-words w-full">{skill.name}</span>
+            <span className="shrink-0 group-hover:rotate-6 group-focus:rotate-6 transition-transform duration-300 text-lg sm:text-2xl">
+                {skill.icon}
+            </span>
+            <span translate="no" className="text-xs sm:text-sm font-medium tracking-tight text-left sm:text-center leading-tight break-words line-clamp-2 sm:line-clamp-none w-full">
+                {skill.name}
+            </span>
 
             {/* Tooltip */}
             {skill.description && (
-                <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 min-w-48 max-w-xs p-3 rounded-xl z-50 bg-zinc-900 text-zinc-100 dark:bg-zinc-700 dark:text-white text-xs text-center leading-relaxed shadow-2xl backdrop-blur-sm opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus:opacity-100 group-focus:visible group-focus:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
+                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 sm:w-64 p-2.5 rounded-lg z-50 bg-zinc-900 text-zinc-100 dark:bg-zinc-700 dark:text-white text-xs text-center leading-relaxed shadow-xl backdrop-blur-sm opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus:opacity-100 group-focus:visible group-focus:translate-y-0 transition-all duration-200 ease-out pointer-events-none">
                     {skill.description}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-zinc-900 dark:border-t-zinc-700"></div>
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-6 border-transparent border-t-zinc-900 dark:border-t-zinc-700"></div>
                 </div>
             )}
         </div>
     );
 }
-
 export default function Skills() {
     const skillEntries = Object.entries(techSkills);
     // Agrupar categorías de 2 en 2
