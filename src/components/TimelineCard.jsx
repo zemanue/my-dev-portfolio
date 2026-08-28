@@ -13,9 +13,10 @@ TimelineCard.propTypes = {
         description: PropTypes.string,
         icon: PropTypes.element,
     }).isRequired,
+    showDatesInline: PropTypes.bool,
 };
 
-export default function TimelineCard({ element }) {
+export default function TimelineCard({ element, showDatesInline = false }) {
     const [expanded, setExpanded] = useState(false);
 
     // Filtramos líneas vacías si las hubiera
@@ -37,18 +38,22 @@ export default function TimelineCard({ element }) {
                     )}
 
                     <div className="min-w-0 flex-1">
-                        <h3 className="text-base sm:text-lg font-semibold leading-snug tracking-tight text-zinc-900 dark:text-zinc-100 break-words">
+                        <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug tracking-tight text-zinc-900 dark:text-zinc-100 break-words">
                             {element.title}
                         </h3>
 
                         {element.place && (
-                            <p className="text-xs sm:text-sm font-medium text-indigo-600 dark:text-indigo-400 mt-0.5 break-words">
+                            <p className="text-sm md:text-base font-medium text-indigo-600 dark:text-indigo-400 mt-0.5 break-words">
                                 {element.place}
                             </p>
                         )}
 
+                        {/* Muestra la fecha siempre si showDatesInline es true, o solo en móvil (sm:hidden) si viene de Timeline */}
                         {element.dateStart && (
-                            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 sm:hidden">
+                            <p className={cn(
+                                "text-xs md:text-sm text-zinc-500 dark:text-zinc-400 mt-1 font-medium",
+                                !showDatesInline && "sm:hidden"
+                            )}>
                                 {element.dateStart} {element.dateEnd && `- ${element.dateEnd}`}
                             </p>
                         )}
@@ -80,7 +85,7 @@ export default function TimelineCard({ element }) {
                     <div className="overflow-hidden">
                         <div className="space-y-2.5">
                             {descriptionLines.map((line, idx) => (
-                                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                                <div key={idx} className="flex items-start gap-2.5 text-sm md:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
                                     <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-indigo-500/80 dark:bg-indigo-400 mt-2" />
                                     <span className="flex-1 break-words">{line}</span>
                                 </div>
