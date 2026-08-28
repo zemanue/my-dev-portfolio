@@ -30,16 +30,16 @@ function SkillCard({ skill }) {
     return (
         <div
             tabIndex={0}
-            className="relative flex flex-col items-center p-4 rounded-xl bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow transition-all duration-300 border border-zinc-200 dark:border-zinc-700 hover:scale-105 hover:shadow-xl focus:scale-105 focus:shadow-xl focus:outline-none group cursor-pointer"
+            className="group relative flex flex-col items-center p-4 rounded-xl bg-white/80 dark:bg-zinc-900/90 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800 shadow-xs shadow-zinc-300 dark:shadow-none transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-zinc-800/25 dark:hover:shadow-zinc-200/25 hover:border-zinc-700/25 dark:hover:border-zinc-300/25 hover:z-30 focus:scale-105 focus:shadow-xl focus:shadow-zinc-800/25 dark:focus:shadow-zinc-200/25 focus:border-indigo-400/25 focus:z-30 focus:outline-none"
         >
-            <span className="mb-2">{skill.icon}</span>
-            <span translate="no" className="mt-1 text-base font-medium tracking-tight text-center break-words w-full">{skill.name}</span>
+            <span className="mb-2 group-hover:rotate-6 group-focus:rotate-6 transition-transform duration-300">{skill.icon}</span>
+            <span translate="no" className="mt-1 text-sm font-medium tracking-tight text-center break-words w-full">{skill.name}</span>
 
             {/* Tooltip */}
             {skill.description && (
-                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-48 p-2 bg-zinc-800 dark:bg-zinc-700 text-white text-xs rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus:opacity-100 group-focus:visible transition-all duration-200 pointer-events-none z-10">
+                <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 min-w-48 max-w-xs p-3 rounded-xl z-50 bg-zinc-900 text-zinc-100 dark:bg-zinc-700 dark:text-white text-xs text-center leading-relaxed shadow-2xl backdrop-blur-sm opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus:opacity-100 group-focus:visible group-focus:translate-y-0 transition-all duration-300 ease-out pointer-events-none">
                     {skill.description}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-zinc-800 dark:border-t-zinc-700"></div>
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-zinc-900 dark:border-t-zinc-700"></div>
                 </div>
             )}
         </div>
@@ -64,7 +64,7 @@ export default function Skills() {
                         <React.Fragment key={idx}>
                             {pair.map(([category, items]) => (
                                 <div key={category} className="rounded-2xl bg-white/80 dark:bg-zinc-800/80 shadow-lg p-7 flex flex-col mb-0 border border-zinc-200 dark:border-zinc-700 element-to-reveal">
-                                    <TitleH3 color="blue">{category}</TitleH3>
+                                    <TitleH3>{category}</TitleH3>
                                     <SkillsGrid>
                                         {items.map((skill) => (
                                             <SkillCard key={skill.name} skill={skill} />
