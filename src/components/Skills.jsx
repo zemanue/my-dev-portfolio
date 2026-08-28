@@ -58,7 +58,7 @@ export default function Skills() {
     }
 
     return (
-        <section id="skills" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-50 to-zinc-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
+        <section id="skills" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-100 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <div className="max-w-6xl mx-auto">
                 <TitleH2>Habilidades</TitleH2>
 

@@ -38,7 +38,7 @@ function ProjectCard({ project, onImageClick }) {
         if (color === "nintendo") return <BsNintendoSwitch className="inline mr-2 mb-1" />;
         return null;
     };
-    
+
     return (
         <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700 element-to-reveal">
             {/* Project Title */}
@@ -119,7 +119,7 @@ export default function Projects() {
     const handleNext = () => setModalIndex((i) => (i < modalImages.length - 1 ? i + 1 : i));
 
     return (
-        <section id="projects" className="max-w-7xl mx-auto py-16 px-4">
+        <section id="projects" className="max-w-7xl mx-auto py-16 px-4 bg-gradient-to-b from-white via-zinc-100 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <TitleH2>Proyectos</TitleH2>
             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (

@@ -6,7 +6,7 @@ export default function AboutMe() {
     const [descriptionExpanded, setDescriptionExpanded] = useState(false);
 
     return (
-        <section id="about-me" className="max-w-7xl mx-auto py-16 px-4">
+        <section id="about-me" className="max-w-7xl mx-auto py-16 px-4 bg-gradient-to-b from-white via-zinc-100 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <TitleH2>Sobre mí</TitleH2>
 
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
