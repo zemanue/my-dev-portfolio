@@ -8,7 +8,7 @@ import { socialLinks } from "../constants/socialLinks";
 
 export default function Hero() {
     return (
-        <section id="hero" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 bg-gradient-to-b from-white via-zinc-100 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
+        <section id="hero" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-4 bg-gradient-to-b from-white via-zinc-200 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <div className="mx-auto max-w-4xl text-center">
                 {/* About Section */}
                 <div className="flex items-center justify-center gap-8 flex-wrap">

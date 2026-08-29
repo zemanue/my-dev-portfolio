@@ -119,9 +119,9 @@ export default function Projects() {
     const handleNext = () => setModalIndex((i) => (i < modalImages.length - 1 ? i + 1 : i));
 
     return (
-        <section id="projects" className="max-w-7xl mx-auto py-16 px-4 bg-gradient-to-b from-white via-zinc-100 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
+        <section id="projects" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-200 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <TitleH2>Proyectos</TitleH2>
-            <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="max-w-7xl mx-auto mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
                     <ProjectCard key={project.title} project={project} onImageClick={handleImageClick} />
                 ))}

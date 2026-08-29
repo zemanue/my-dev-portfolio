@@ -6,17 +6,17 @@ export default function AboutMe() {
     const [descriptionExpanded, setDescriptionExpanded] = useState(false);
 
     return (
-        <section id="about-me" className="max-w-7xl mx-auto py-16 px-4 bg-gradient-to-b from-white via-zinc-100 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
+        <section id="about-me" className="py-16 px-4 bg-gradient-to-b from-white via-zinc-200 to-white dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-500">
             <TitleH2>Sobre mí</TitleH2>
 
-            <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div className="max-w-7xl mx-auto mt-8 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 <div className="lg:col-span-8 bg-white dark:bg-zinc-900/60 backdrop-blur-sm border border-zinc-200/80 dark:border-zinc-800 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all">
                     {/* Contenedor del texto con máscara de gradiente cuando está colapsado */}
                     <div className="relative">
                         <div
                             className={`space-y-4 text-zinc-800 dark:text-zinc-300 text-base sm:text-lg leading-relaxed text-justify transition-all duration-500 ease-in-out overflow-hidden ${descriptionExpanded
                                 ? "max-h-[1000px] opacity-100"
-                                : "max-h-36 opacity-90 [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]"
+                                : "max-h-90 md:max-h-68 opacity-90 [mask-image:linear-gradient(to_bottom,black_50%,transparent_100%)]"
                                 }`}
                         >
                             <p>
