@@ -5,7 +5,7 @@ export const jobs = [
         dateStart: "jun. 2025",
         dateEnd: "actualidad",
         place: "Logiscool (Marbella)",
-        description: `Enseño programación básica a niños/as en inglés y español, utilizando enseñanza visual por bloques (tipo Scratch) a través de la plataforma Scoolcode. \n Enseño Python y desarrollo de videojuegos con Unity a adolescentes. \n Colaboro con centros educativos para actividades extraescolares: English International College (EIC) y British International School of Marbella (BISM). \n Gestiono la administración de la academia: uso de CRM, facturación, comunicación con familias y clientes potenciales, etc.`
+        description: `He impartido formación en programación a más de 100 estudiantes en inglés y español, utilizando programación visual por bloques (tipo Scratch), programación con Python y desarrollo de videojuegos con Godot y Unity. \n Colaboro semanalmente con centros educativos internacionales, como English International College (EIC) y British International School (BISM). \n Gestiono la administración de la academia: uso de CRM, creación de workflows automatizados, gestión de pagos, registro de información contable y comunicación con clientes, optimizando el trabajo de la academia y contribuyendo a la fidelización de clientes.`
     },
     {
         id: 3,
@@ -13,7 +13,7 @@ export const jobs = [
         dateStart: "ago. 2025",
         dateEnd: "sept. 2025",
         place: "Mainjobs (Marbella)",
-        description: `Enseñé competencias digitales a niños/as y adolescentes. \n Programa estatal gratuito y a través de proyectos gamificados.`
+        description: `Enseñé competencias digitales a niños/as y adolescentes a través de un programa estatal gratuito y proyectos gamificados, mejorando la formación digital de familias con recursos limitados.`
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ export const jobs = [
         dateStart: "mar. 2025",
         dateEnd: "jun. 2025",
         place: "Bimfloat, Málaga (Prácticas DAM)",
-        description: `Desarrollé novelas visuales infantiles con Unity y la extensión Naninovel. \n Me encargué de configurar prefabs, escenas, scripts en C#, etc. \n Investigué sobre IA Generativa para la creación de historias e imágenes (ChatGPT, Gemini, Krita AI Diffusion, etc.).`
+        description: `Contribuí al desarrollo y publicación en Nintendo Switch de tres novelas visuales infantiles utilizando Unity. \n Configuré prefabs, escenas y scripts en C# e investigué sobre IA Generativa para la creación y edición de historias e imágenes (ChatGPT, Gemini, Krita AI Diffusion).`
     },
     {
         id: 1,
@@ -29,6 +29,6 @@ export const jobs = [
         dateStart: "sept. 2015",
         dateEnd: "jun. 2025",
         place: "Autónomo",
-        description: `He dado clases particulares a estudiantes de Ed. Primaria y ESO: Matemáticas, Lengua, Inglés...\n Adquirí experiencia frente a diferentes necesidades educativas: discapacidad visual, dislexia, discalculia, TDAH... \n Creé y usé materiales manipulativos y digitales, empleando siempre metodologías activas. \n Enseñé español a alumnado extranjero.`
+        description: `Impartí clases particulares a estudiantes de Ed. Primaria y ESO en Matemáticas, Lengua, Inglés y Español a alumnado extranjero, adaptando metodologías activas y contribuyendo a      mejorar su rendimiento académico. \n Mejoré la inclusión y autonomía de alumnado con necesidades educativas especiales: discapacidad visual, dislexia, discalculia, TDAH, etc.`
     }
 ];

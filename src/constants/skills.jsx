@@ -1,6 +1,7 @@
 import React from "react";
 import { FaJava, FaPhp, FaPython, FaReact, FaUnity, FaGitAlt, FaGithub } from "react-icons/fa6";
-import { TbBrandCSharp, TbBrandNextjs } from "react-icons/tb";
+import { TbBrandCSharp } from "react-icons/tb";
+import { RiNextjsLine } from "react-icons/ri";
 import { SiAndroidstudio, SiClaudecode, SiCursor, SiGithubcopilot, SiMongodb, SiMysql, SiShadcnui, SiPostman, SiSpringboot, SiTailwindcss, SiTypescript, SiVite } from "react-icons/si";
 
 export const techSkills = {
@@ -13,8 +14,8 @@ export const techSkills = {
     ],
     "Frontend & Frameworks Web": [
         { name: "React", icon: <FaReact className="text-cyan-400 text-5xl" />, description: "Librería para crear interfaces de usuario modulares y dinámicas" },
-        { name: "Next.js", icon: <TbBrandNextjs className="text-black-900 text-5xl" />, description: "Framework de React para producción con renderizado del lado del servidor y optimizaciones" },
-        { name: "Vite", icon: <SiVite className="text-purple-500 text-5xl" />, description: "Herramienta de desarrollo front-end rápido con hot module replacement y compilación optimizada" },
+        { name: "Next.js", icon: <RiNextjsLine className="text-black-900 text-5xl" />, description: "Framework de React para sitios web de alto rendimiento, optimizadas y rápidas" },
+        { name: "Vite", icon: <SiVite className="text-purple-500 text-5xl" />, description: "Herramienta de desarrollo front-end ultrarrápida, con recarga en caliente y compilación optimizada" },
         { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 text-5xl" />, description: "Framework CSS utility-first para diseño de sistemas UI modernos" },
         { name: "Shadcn UI", icon: <SiShadcnui className="text-black-400 text-5xl" />, description: "Kit de componentes UI accesibles y personalizables para React" },],
     "Backend y Bases de Datos": [
