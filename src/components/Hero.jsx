@@ -49,14 +49,14 @@ export default function Hero() {
                 {/* Botones Descargar CV */}
                 <div translate="no" className="mt-6 flex gap-4 justify-center">
                     <a
-                        href="CV ESP José Manuel Redondo 2025.pdf"
+                        href="CV ESP José Manuel Redondo 2026.pdf"
                         download
                         className="inline-block rounded-lg bg-blue-600 px-6 py-3 text-white font-semibold hover:bg-blue-700 transition"
                     >
                         Descargar CV (Español)
                     </a>
                     <a
-                        href="CV ENG José Manuel Redondo 2025.pdf"
+                        href="CV ENG José Manuel Redondo 2026.pdf"
                         download
                         className="inline-block rounded-lg bg-gray-600 px-6 py-3 text-white font-semibold hover:bg-gray-700 transition"
                     >
