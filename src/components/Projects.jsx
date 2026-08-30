@@ -11,7 +11,7 @@ ProjectCard.propTypes = {
     project: PropTypes.shape({
         title: PropTypes.string.isRequired,
         images: PropTypes.arrayOf(PropTypes.string).isRequired,
-        tag: PropTypes.string.isRequired,
+        tags: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         skills: PropTypes.arrayOf(PropTypes.string).isRequired,
         links: PropTypes.arrayOf(PropTypes.shape({
@@ -72,10 +72,12 @@ function ProjectCard({ project, onImageClick }) {
                     )}
                 </div>
             </div>
-            {/* Tag */}
-            <p className={`inline-block mb-2 px-3 py-1 text-xs font-semibold rounded-full text-white shadow w-fit bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700`}>
-                {project.tag}
-            </p>
+            {/* Tags */}
+            <div className={`flex flex-wrap gap-3 mt-2`}>
+                {project.tags.map((tag) => (
+                    <span key={tag} className={`inline-block px-3 py-1 text-xs font-semibold rounded-full text-white shadow w-fit bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700`}>{tag}</span>
+                ))}
+            </div>
             {/* Description */}
             <p className="mt-2 text-zinc-700 dark:text-zinc-300">{project.description}</p>
             {/* Skills */}

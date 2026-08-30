@@ -1,7 +1,7 @@
 export const projects = [
     {
         title: "MathEdu",
-        tag: "📐 Plataforma educativa de didáctica",
+        tags: ["📐 Plataforma web educativa", "🔨 En construcción"],
         description: "Plataforma web educativa para docentes Educación Infantil y Primaria sobre didáctica de las matemáticas. Ofrece artículos de formación gratuitos, información sobre cursos y actividades interactivas digitales. Este prototipo está diseñado para crear fácilmente artículos con componentes personalizados atractivos, así como añadir nuevos niveles de actividades y cuentos mediante archivos JSON.",
         images: [
             "math-edu/math-edu-hero.png",
@@ -21,7 +21,7 @@ export const projects = [
 
     {
         title: "AYS - At Your Service",
-        tag: "🎓 Proyecto de Fin de Grado DAM",
+        tags: ["🎓 Proyecto de Fin de Grado DAM"],
         description: "Sistema web que permite a profesionales autónomos registrar clientes, servicios con diferentes tarifas y sesiones en un calendario visual, facilitando la gestión integral de su negocio desde un mismo entorno. Incluye CRUD dinámico, integración de librerías como FullCalendar y una arquitectura basada en el patrón Modelo-Vista-Controlador (MVC).",
         images: ["ayserv-autonomos/ayserv-calendar.png", "ayserv-autonomos/ayserv-home.png", "ayserv-autonomos/ayserv-details-parent.png", "ayserv-autonomos/ayserv-edit-service.png", "ayserv-autonomos/ayserv-new-session.png", "ayserv-autonomos/ayserv-session-list.png"],
         links: [
@@ -31,7 +31,7 @@ export const projects = [
     },
     {
         title: "¡Este portfolio!",
-        tag: "🌟 Proyecto personal",
+        tags: ["🌟 Proyecto personal"],
         description: "Portfolio personal desarrollado con herramientas frontend modernas como React, Tailwind CSS y Vite. Con diseño responsive, modo oscuro/claro y componentes reutilizables.",
         images: ["my-portfolio-about.png"],
         links: [
@@ -41,7 +41,7 @@ export const projects = [
     },
     {
         title: "Telecom ERP",
-        tag: "🤝 Proyecto grupal",
+        tags: ["🤝 Proyecto grupal"],
         description: "Sistema de gestión empresarial (ERP) para una empresa de telecomunicaciones. Permite gestionar clientes, productos, facturas y empleados con un enfoque en la usabilidad y prevención de pérdida de datos. Incluye funcionalidades como CRUD dinámico y generación de facturas en PDF.",
         images: ["telecom-erp/telecom-.png", "telecom-erp/telecom-editar-facturas.png", "telecom-erp/telecom-facturas.png"],
         links: [
@@ -51,7 +51,7 @@ export const projects = [
     },
     {
         title: "Novelas Visuales",
-        tag: "🎮 Publicadas en Nintendo Switch",
+        tags: ["🎮 Publicadas en Nintendo Switch"],
         description: "Novelas visuales infantiles desarrolladas con Unity y el plugin Naninovel. Configuración de escenas, prefabs, animaciones y scripts en C#. Uso de IA generativa (ChatGPT, Gemini e IA integrada en Krita) para creación y mejora de imágenes e historias. Proyecto grupal en prácticas DAM en Bimfloat.",
         images: ["visual-novels/secret-garden-1.png", "visual-novels/jungle-challenge-1.png", "visual-novels/mila-zug-1.png", "visual-novels/mila-zug-2.png", "visual-novels/mila-zug-3.png", "visual-novels/jungle-challenge-2.png", "visual-novels/secret-garden-2.png"],
         links: [
