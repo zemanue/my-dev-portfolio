@@ -41,62 +41,82 @@ function ProjectCard({ project, onImageClick }) {
     };
 
     return (
-        <div key={project.title} className="flex flex-col gap-4 border rounded-lg text-zinc-900 dark:text-zinc-100 bg-gray-100 dark:bg-zinc-800/80 shadow-2xl p-7 border-zinc-200 dark:border-zinc-700 element-to-reveal">
+        <div
+            key={project.title}
+            className="flex flex-col gap-4 element-to-reveal rounded-xl sm:rounded-2xl text-zinc-900 dark:text-zinc-100 bg-white/80 dark:bg-zinc-900/80 backdrop-blur p-4 sm:p-6 border border-zinc-200 dark:border-zinc-800 shadow-xs shadow-zinc-300 dark:shadow-none transition-all duration-300 ease-in-out hover:shadow-lg dark:hover:shadow-zinc-500/25 hover:border-zinc-700/25 dark:hover:border-zinc-300/25"
+        >
             {/* Project Title */}
-            <h3 className="mt-4 text-center text-2xl font-bold rounded-lg">{project.title}</h3>
+            <h3 className="mB-4 text-center text-xl sm:text-2xl font-bold tracking-tight leading-snug text-zinc-900 dark:text-zinc-100">
+                {project.title}
+            </h3>
+
             {/* Image with Overlay */}
             <div
-                className="relative group cursor-pointer overflow-hidden rounded-md"
+                className="group relative cursor-pointer overflow-hidden rounded-xl"
                 onClick={() => onImageClick(project.images, 0)}
             >
                 <img
                     src={project.images[0]}
                     alt={project.title}
-                    className="h-48 w-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
-                    <FaSearchPlus className="text-4xl mb-2" />
-                    <span className="text-lg font-semibold">Ver galería</span>
+                <div className="absolute inset-0 bg-black/55 opacity-0 hover:opacity-100 active:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                    <FaSearchPlus className="text-3xl mb-2" />
+                    <span className="text-base font-semibold">Ver galería</span>
                     {project.images.length > 1 && (
-                        <span className="text-sm mt-1">
-                            {project.images.length} {project.images.length === 1 ? 'foto' : 'fotos'}
+                        <span className="text-sm mt-1 text-zinc-300">
+                            {project.images.length} fotos
                         </span>
                     )}
                 </div>
-                {/* Badge permanente para móvil (esquina inferior derecha) */}
-                <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded-md text-xs flex items-center gap-1 sm:opacity-0 sm:group-hover:opacity-0 transition-opacity">
+                {/* Image number badge */}
+                <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded-md text-xs flex items-center gap-1 group-hover:opacity-0 transition-opacity">
                     <FaSearchPlus className="text-sm" />
                     {project.images.length > 1 && (
                         <span>{project.images.length}</span>
                     )}
                 </div>
             </div>
+
             {/* Tags */}
-            <div className={`flex flex-wrap gap-3 mt-2`}>
+            <div className="flex flex-wrap gap-2 mt-1">
                 {project.tags.map((tag) => (
-                    <span key={tag} className={`inline-block px-3 py-1 text-xs font-semibold rounded-full text-white shadow w-fit bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700`}>{tag}</span>
+                    <span
+                        key={tag}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-full text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-purple-600 shadow-sm"
+                    >
+                        {tag}
+                    </span>
                 ))}
             </div>
+
             {/* Description */}
-            <p className="mt-2 text-zinc-700 dark:text-zinc-300">{project.description}</p>
+            <p className="text-sm md:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                {project.description}
+            </p>
+
             {/* Skills */}
-            <div translate="no" className="flex flex-wrap gap-2 mt-2">
+            <div translate="no" className="flex flex-wrap gap-2">
                 {project.skills.map((skill) => (
-                    <span key={skill} className="inline-block bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
+                    <span
+                        key={skill}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 dark:bg-indigo-950/50 text-indigo-700 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-700/40"
+                    >
                         {skill}
                     </span>
                 ))}
             </div>
+
             {/* Links */}
-            <div className="flex flex-wrap gap-3 mt-4">
+            <div className="flex flex-wrap gap-3 mt-2">
                 {project.links.map((link, index) => (
                     <a
                         key={index}
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`w-fit inline-block border rounded-md px-4 py-2 transition-colors duration-300 font-medium ${getLinkStyles(link.color)}`}
+                        className={`w-fit inline-flex items-center gap-1.5 border rounded-lg px-4 py-2 text-sm font-medium transition-all duration-300 ${getLinkStyles(link.color)}`}
                     >
                         {getLinkIcon(link.color)}
                         {link.text}
