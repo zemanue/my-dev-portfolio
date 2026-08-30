@@ -1,6 +1,6 @@
 import TitleH2 from "./TitleH2";
 import { FaGithub } from "react-icons/fa6";
-import { FaSearchPlus } from "react-icons/fa";
+import { FaExternalLinkAlt, FaSearchPlus } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
 import React, { useState } from "react";
 import PropTypes from "prop-types";
@@ -28,6 +28,7 @@ function ProjectCard({ project, onImageClick }) {
     const getLinkStyles = (color) => {
         const styles = {
             github: "bg-transparent hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100 border-zinc-300 dark:border-zinc-600",
+            mathEdu: "text-white bg-[#308479] hover:bg-[#056a60] border-0",
             nintendo: "bg-red-600 hover:bg-red-700 text-white border-red-600",
         };
         return styles[color] || styles.github;
@@ -36,7 +37,7 @@ function ProjectCard({ project, onImageClick }) {
     const getLinkIcon = (color) => {
         if (color === "github") return <FaGithub className="inline mr-2 mb-1" />;
         if (color === "nintendo") return <BsNintendoSwitch className="inline mr-2 mb-1" />;
-        return null;
+        return <FaExternalLinkAlt className="inline mr-2 mb-1" />;
     };
 
     return (

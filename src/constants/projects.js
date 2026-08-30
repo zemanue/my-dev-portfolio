@@ -1,5 +1,25 @@
 export const projects = [
     {
+        title: "MathEdu",
+        tag: "📐 Plataforma educativa de didáctica",
+        description: "Plataforma web educativa para docentes Educación Infantil y Primaria sobre didáctica de las matemáticas. Ofrece artículos de formación gratuitos, información sobre cursos y actividades interactivas digitales. Este prototipo está diseñado para crear fácilmente artículos con componentes personalizados atractivos, así como añadir nuevos niveles de actividades y cuentos mediante archivos JSON.",
+        images: [
+            "math-edu/math-edu-hero.png",
+            "math-edu/math-edu-articulo.png",
+            "math-edu/math-edu-cuento.png",
+            "math-edu/math-edu-subitizacion.png",
+            "math-edu/math-edu-cuento-completado.png",
+            "math-edu/math-edu-articulo-2.png",
+            "math-edu/math-edu-pildoras-seleccion.png"
+        ],
+        links: [
+            { text: "Ver proyecto", url: "https://manu-reco.github.io/math-web/", color: "mathEdu" },
+            { text: "Ver en GitHub", url: "https://github.com/manu-reco/math-web", color: "github" }
+        ],
+        skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Shadcn UI", "Responsive Design"]
+    },
+
+    {
         title: "AYS - At Your Service",
         tag: "🎓 Proyecto de Fin de Grado DAM",
         description: "Sistema web que permite a profesionales autónomos registrar clientes, servicios con diferentes tarifas y sesiones en un calendario visual, facilitando la gestión integral de su negocio desde un mismo entorno. Incluye CRUD dinámico, integración de librerías como FullCalendar y una arquitectura basada en el patrón Modelo-Vista-Controlador (MVC).",
@@ -12,7 +32,7 @@ export const projects = [
     {
         title: "¡Este portfolio!",
         tag: "🌟 Proyecto personal",
-        description: "Portfolio personal desarrollado con herramientas front-end modernas como React, Tailwind CSS y Vite. Con diseño responsive, modo oscuro/claro y componentes reutilizables.",
+        description: "Portfolio personal desarrollado con herramientas frontend modernas como React, Tailwind CSS y Vite. Con diseño responsive, modo oscuro/claro y componentes reutilizables.",
         images: ["my-portfolio-about.png"],
         links: [
             { text: "Ver en GitHub", url: "https://github.com/manu-reco/my-dev-portfolio", color: "github" }
